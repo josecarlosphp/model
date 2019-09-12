@@ -99,7 +99,7 @@ class Node
             {
                 if(array_key_exists($key, $array))
                 {
-                    $class = get_class($child);
+                    $class = basename(get_class($child));
                     switch($class)
                     {
                         case 'Node':
