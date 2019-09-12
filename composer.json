@@ -1,0 +1,21 @@
+{
+    "name": "josecarlosphp/model",
+    "description": "Generic classes for creating datasets models and use them to validate data.",
+    "keywords": [
+        "PHP", "dataset", "model"
+    ],
+    "homepage": "https://github.com/josecarlosphp/model",
+    "type": "library",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "José Carlos Cruz Parra",
+            "homepage": "https://josecarlosphp.com/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "josecarlosphp\\model\\": "src/"
+        }
+    }
+}
