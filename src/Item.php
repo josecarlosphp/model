@@ -68,7 +68,13 @@ class Item
                 }
                 break;
             case Item::TYPE_DATETIME:
-                //TODO:
+                $value = str_replace('T', ' ', $value);
+                $format = 'Y-m-d H:i:s';
+                $d = DateTime::createFromFormat($format, $value);
+                if(!$d || $d->format($format) != $value)
+                {
+                    $ok = false;
+                }
                 break;
             case Item::TYPE_INTEGER:
                 if(!is_numeric($value) || $value != intval($value))
