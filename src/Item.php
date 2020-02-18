@@ -61,7 +61,7 @@ class Item
                 break;
             case Item::TYPE_DATE:
                 $format = 'Y-m-d';
-                $d = DateTime::createFromFormat($format, $value);
+                $d = \DateTime::createFromFormat($format, $value);
                 if(!$d || $d->format($format) != $value)
                 {
                     $ok = false;
@@ -70,7 +70,7 @@ class Item
             case Item::TYPE_DATETIME:
                 $value = str_replace('T', ' ', $value);
                 $format = 'Y-m-d H:i:s';
-                $d = DateTime::createFromFormat($format, $value);
+                $d = \DateTime::createFromFormat($format, $value);
                 if(!$d || $d->format($format) != $value)
                 {
                     $ok = false;
